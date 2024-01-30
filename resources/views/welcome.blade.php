@@ -7,6 +7,15 @@
     @vite('resources/js/app.js')
 </head>
 <body>
-    <h1>Ciao</h1>
+    <ul>
+    @foreach($movies as $movie)
+    <li>{{$movie -> id}}</li>
+    <li>{{$movie -> title}}</li>
+    <li>{{$movie -> original_title}}</li>
+    <li>{{$movie -> nationality}}</li>
+    <li>{{$movie -> date}}</li>
+    <li>{{$movie -> vote}}</li>
+    @endforeach
+    </ul>
 </body>
 </html>
